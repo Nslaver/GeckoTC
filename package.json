@@ -1,0 +1,25 @@
+{
+  "name": "gecko",
+  "version": "1.0.0",
+  "description": "Geckoboard Tech Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nslaver/GeckoTC.git"
+  },
+  "keywords": [
+    "Geckoboard"
+  ],
+  "author": "hburbano@bbox.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nslaver/GeckoTC/issues"
+  },
+  "homepage": "https://github.com/Nslaver/GeckoTC#readme",
+  "dependencies": {
+    "geckoboard": "^1.1.0"
+  }
+}
