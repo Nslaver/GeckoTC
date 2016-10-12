@@ -9,7 +9,7 @@ var minutefifteenth = function() {
 }
 var CronJob = require('cron').CronJob;
 new CronJob({
-  cronTime: "15 * * * *",//15 seconds after every minute
+  cronTime: "45 * * * *",//15 seconds after every minute
   onTick: minutefifteenth,
   start: true,
   timeZone: "America/Los_Angeles"

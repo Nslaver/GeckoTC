@@ -19,8 +19,9 @@ client.registerMethod("getAirportData", "https://api.flightstats.com/flex/delayi
 /* This will create an API to the endpoint:
  * https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/${id}?appId=FLIGHTSTATS_APPID&appKey=FLIGHTSTATS_APPKEY"
  */
+var exports = module.exports = {};
 
-function getRow(iata, callback){
+exports.getRow = function getRow(iata, callback){
   args.path.id = iata;
   client.methods.getAirportData(args, function (data, response) {
     var airdata = data.delayIndexes.map(function(current){
@@ -41,7 +42,7 @@ function getRow(iata, callback){
   });
 }
 
-function insertData(data){
+exports.insertData = function insertData(data){
   gb.datasets.findOrCreate(
   options,
   function (err, dataset) {
@@ -66,8 +67,3 @@ function insertData(data){
   }
 );
 }
-
-getRow('ATL.PEK.DXB',function(airportRows){
-  console.log(airportRows);
-  insertData(airportRows);
-});
