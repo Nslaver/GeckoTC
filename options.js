@@ -21,27 +21,27 @@ var options = {
     },
     flights: {
       type: 'number',
-      name: 'Total number of flights'
+      name: 'Total'
     },
     canceled: {
       type: 'number',
-      name: 'Number of canceled flights'
+      name: 'Canceled'
     },
     ontime: {
       type: 'number',
-      name: 'Number of flights on time'
+      name: 'On time'
     },
     delayed15: {
       type: 'number',
-      name: 'Number of flights delayed 15 min'
+      name: 'Delayed 15 min'
     },
     delayed30: {
       type: 'number',
-      name: 'Number of flights delayed 30 min'
+      name: 'Delayed 30 min'
     },
     delayed45: {
       type: 'number',
-      name: 'Number of flights delayed 45 min'
+      name: 'Delayed 45 min'
     }
   }
 }

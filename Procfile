@@ -1,2 +1,2 @@
+web: node clock.js
 del: node clearDataSet.js
-clock: node clock.js

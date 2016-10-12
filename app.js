@@ -50,7 +50,6 @@ exports.insertData = function insertData(data){
       console.error(err);
       return;
     }
-
     dataset.post(
       data
       ,

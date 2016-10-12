@@ -2,12 +2,13 @@
   "name": "gecko",
   "version": "1.0.0",
   "description": "Geckoboard Tech Challenge",
-  "main": "app.js",
+  "main": "clock.js",
   "engines": {
     "node": "6.2.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node clock.js"
   },
   "repository": {
     "type": "git",
