@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Nslaver/GeckoTC#readme",
   "dependencies": {
+    "cron": "^1.1.1",
     "geckoboard": "^1.1.0",
     "node-rest-client": "^2.0.1"
   }
