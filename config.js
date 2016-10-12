@@ -8,4 +8,6 @@ config.geckoboard = {};
 
 config.geckoboard.dataset = 'airport.delay';
 
+config.cron.time = '"*/15 * * * *"';
+
 module.exports = config;

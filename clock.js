@@ -1,18 +1,18 @@
 var app = require('./app');
 var config = require('./config');
 
-var minuteFifteenth = function() {
+var everyFifteenMinutes = function() {
   app.getRow(config.flightstats.airPorts, function(airportRows) {
     console.log(airportRows);
     app.insertData(airportRows);
   });
-  console.log("Running every hour at minute 15");
+  console.log("Running every 15 minutes");
 }
 
 var CronJob = require('cron').CronJob;
 new CronJob({
-  cronTime: "15 * * * *", //15 minutes after every hour
-  onTick: minuteFifteenth,
+  cronTime: config.cron.time, //run every 15 minutes
+  onTick: everyFifteenMinutes,
   start: true,
   timeZone: "America/Los_Angeles"
 });
