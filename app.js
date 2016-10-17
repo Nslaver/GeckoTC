@@ -7,11 +7,6 @@ var gb = require('geckoboard')(process.env.GECKO_APIKEY);
 var client = new Client();
 
 
-// Load variables from
-var args = {
-  path : {},
-  parameters: { appId: process.env.FLIGHTSTATS_APPID, appKey: process.env.FLIGHTSTATS_APPKEY, codeType : 'IATA'}
-};
 
 // registering remote methods
 client.registerMethod("getAirportData", "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/${id}", "GET");
@@ -22,6 +17,11 @@ client.registerMethod("getAirportData", "https://api.flightstats.com/flex/delayi
 var exports = module.exports = {};
 
 exports.getRow = function getRow(iata, callback){
+  // Load variables from
+  var args = {
+    path : {},
+    parameters: { appId: process.env.FLIGHTSTATS_APPID, appKey: process.env.FLIGHTSTATS_APPKEY, codeType : 'IATA'}
+  };
   args.path.id = iata;
   client.methods.getAirportData(args, function (data, response) {
     var airdata = data.delayIndexes.map(function(current){

@@ -10,6 +10,6 @@ config.geckoboard.dataset = 'airport.delay';
 
 config.cron = {}
 
-config.cron.time = '*/15 * * * *';
+config.cron.time = '*/15 * * * * *';
 
 module.exports = config;

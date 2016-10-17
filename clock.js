@@ -6,7 +6,7 @@ var everyFifteenMinutes = function() {
     console.log(airportRows);
     app.insertData(airportRows);
   });
-  console.log("Running every 15 minutes");
+  console.log("Running every 15 seconds");
 }
 
 var CronJob = require('cron').CronJob;
